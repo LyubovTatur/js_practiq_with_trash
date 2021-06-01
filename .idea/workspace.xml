@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ef4a9e8b-71a1-4cac-846f-56ec67b2d0e6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/trash/demo1/demo1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/demo2/demo2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/hiber/hiber.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled/src/main/java/com/company/ActorFilm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled/src/main/java/com/company/Actors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled/src/main/java/com/company/Comments.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled/src/main/java/com/company/Dubbing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled/src/main/java/com/company/Films.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled/src/main/java/com/company/Languages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled/src/main/java/com/company/VoiceActing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled/src/main/resources/ActorFilm.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled/src/main/resources/Actors.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled/src/main/resources/Comments.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled/src/main/resources/Dubbing.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled/src/main/resources/Films.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled/src/main/resources/Languages.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled/src/main/resources/VoiceActing.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled/untitled.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__com_ibm_icu_icu4j_61_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__org_abego_treelayout_org_abego_treelayout_core_1_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__org_antlr_ST4_4_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__org_antlr_antlr4_4_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__org_antlr_antlr_runtime_3_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__org_glassfish_javax_json_1_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_5_0_Beta1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__org_hibernate_orm_hibernate_core_6_0_0_Alpha8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__org_jboss_jandex_2_2_3_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_1_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/libraries/Maven__org_jvnet_staxex_stax_ex_1_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/src/main/java/com/company/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/src/main/java/com/company/EntityEmplPl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/src/main/java/com/company/Place.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/src/main/resources/Employee.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/src/main/resources/EntityEmplPl.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/src/main/resources/Place.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled1/untitled1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__com_ibm_icu_icu4j_61_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__org_abego_treelayout_org_abego_treelayout_core_1_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__org_antlr_ST4_4_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__org_antlr_antlr4_4_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__org_antlr_antlr_runtime_3_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__org_glassfish_javax_json_1_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_5_0_Beta1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__org_hibernate_orm_hibernate_core_6_0_0_Alpha8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__org_jboss_jandex_2_2_3_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_1_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/libraries/Maven__org_jvnet_staxex_stax_ex_1_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/src/main/java/com/company/ActorFilm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/src/main/java/com/company/Actors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/src/main/java/com/company/Comments.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/src/main/java/com/company/Dubbing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/src/main/java/com/company/Films.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/src/main/java/com/company/Languages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/src/main/java/com/company/VoiceActing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/src/main/resources/ActorFilm.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/src/main/resources/Actors.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/src/main/resources/Comments.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/src/main/resources/Dubbing.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/src/main/resources/Films.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/src/main/resources/Languages.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/src/main/resources/VoiceActing.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled2/untitled2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled3/untitled4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled4/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled4/untitled4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/.idea/libraries/Hibernate_5_4_11_5_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/lib/FastInfoset-1.2.15.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/lib/antlr-2.7.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/lib/byte-buddy-1.10.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/lib/classmate-1.5.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/lib/dom4j-2.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/lib/hibernate-commons-annotations-5.1.0.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/lib/hibernate-core-5.4.11.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/lib/istack-commons-runtime-3.0.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/lib/jandex-2.1.1.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/lib/javassist-3.24.0-GA.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/lib/javax.activation-api-1.2.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/lib/javax.persistence-api-2.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/lib/jaxb-api-2.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/lib/jaxb-runtime-2.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/lib/jboss-logging-3.3.2.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/lib/stax-ex-1.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/lib/txw2-2.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/src/main/java/com/company/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/src/main/java/com/company/EntityEmplPl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/src/main/java/com/company/Place.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/src/main/resources/Employee.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/src/main/resources/EntityEmplPl.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/src/main/resources/Place.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled5/untitled5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled6/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled7/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled7/src/main/java/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled8/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled8/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled8/src/main/java/com/company/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled8/src/main/java/com/company/EntityEmplPl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled8/src/main/java/com/company/Place.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled8/src/main/resources/Employee.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled8/src/main/resources/EntityEmplPl.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled8/src/main/resources/Place.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trash/untitled8/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1tLPNa2wCpA0QIQ7DhowwfQ9Ocj" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/version_1" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="js_practiq" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ef4a9e8b-71a1-4cac-846f-56ec67b2d0e6" name="Default Changelist" comment="" />
+      <created>1622545359440</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622545359440</updated>
+      <workItem from="1622545361464" duration="118000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

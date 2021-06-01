@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.ActorFilm" table="actor_film" schema="db_films">
+        <id name="id">
+            <column name="id" sql-type="int"/>
+        </id>
+        <property name="idFilm">
+            <column name="id_film" sql-type="int" not-null="true"/>
+        </property>
+        <property name="idActor">
+            <column name="id_actor" sql-type="int" not-null="true"/>
+        </property>
+        <property name="nameOfPerson">
+            <column name="name_of_person" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <many-to-one name="filmsByIdFilm" class="com.company.Films">
+            <column name="id_film" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="actorsByIdActor" class="com.company.Actors">
+            <column name="id_actor" not-null="true"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

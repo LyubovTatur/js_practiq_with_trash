@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.package_tables.Films" table="films" schema="db_films">
+        <id name="id">
+            <column name="id" sql-type="int"/>
+        </id>
+        <property name="title">
+            <column name="title" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="budget">
+            <column name="budget" sql-type="int" not-null="true"/>
+        </property>
+        <property name="dues">
+            <column name="dues" sql-type="int" not-null="true"/>
+        </property>
+        <property name="mark">
+            <column name="mark" sql-type="varchar(4)" length="4" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

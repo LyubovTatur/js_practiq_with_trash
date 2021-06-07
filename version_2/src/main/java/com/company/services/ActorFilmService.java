@@ -34,7 +34,7 @@ public class ActorFilmService  extends SessionUtil implements ActorFilmDAO {
         //open session with a transaction
         openTransactionSession();
 
-        String sql = "SELECT * FROM ActorFilm";
+        String sql = "SELECT * FROM Actor_Film";
 
         Session session = getSession();
         Query query = session.createNativeQuery(sql).addEntity(ActorFilm.class);
@@ -50,7 +50,7 @@ public class ActorFilmService  extends SessionUtil implements ActorFilmDAO {
         //open session with a transaction
         openTransactionSession();
 
-        String sql = "SELECT * FROM ActorFilm WHERE ID = :id";
+        String sql = "SELECT * FROM Actor_Film WHERE ID = :id";
 
         Session session = getSession();
         Query query = session.createNativeQuery(sql).addEntity(ActorFilm.class);

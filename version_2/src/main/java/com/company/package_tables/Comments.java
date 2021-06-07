@@ -65,4 +65,14 @@ public class Comments {
     public int hashCode() {
         return Objects.hash(id, commentator, commentText, mark);
     }
+
+    @Override
+    public String toString() {
+        return
+                "id=" + id +
+                ", commentator=" + commentator+
+                ", commentText=" + commentText  +
+                ", mark=" + mark +
+                '\n';
+    }
 }

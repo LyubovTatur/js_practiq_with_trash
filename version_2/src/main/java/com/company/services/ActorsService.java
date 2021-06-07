@@ -79,4 +79,5 @@ public class ActorsService extends SessionUtil implements ActorsDAO {
         //close session with a transaction
         closeTransactionSesstion();
     }
+
 }

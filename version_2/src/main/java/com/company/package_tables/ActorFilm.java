@@ -8,6 +8,8 @@ import java.util.Objects;
 public class ActorFilm {
     private int id;
     private String nameOfPerson;
+    private Films filmsByIdFilm;
+    private Actors actorsByIdActor;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -29,6 +31,26 @@ public class ActorFilm {
         this.nameOfPerson = nameOfPerson;
     }
 
+    @ManyToOne
+    @JoinColumn(name = "id_film", referencedColumnName = "id")
+    public Films getFilmsByIdFilm() {
+        return filmsByIdFilm;
+    }
+
+    public void setFilmsByIdFilm(Films filmsByIdFilm) {
+        this.filmsByIdFilm = filmsByIdFilm;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "id_actor", referencedColumnName = "id")
+    public Actors getActorsByIdActor() {
+        return actorsByIdActor;
+    }
+
+    public void setActorsByIdActor(Actors actorsByIdActor) {
+        this.actorsByIdActor = actorsByIdActor;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -40,5 +62,15 @@ public class ActorFilm {
     @Override
     public int hashCode() {
         return Objects.hash(id, nameOfPerson);
+    }
+
+    @Override
+    public String toString() {
+        return
+                "id=" + id +
+                ", nameOfPerson=" + nameOfPerson +
+                ", filmsByIdFilm=" + filmsByIdFilm +
+                ", actorsByIdActor=" + actorsByIdActor +
+                '\n';
     }
 }

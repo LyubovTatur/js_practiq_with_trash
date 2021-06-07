@@ -52,4 +52,13 @@ public class VoiceActing {
     public void setFilmsByIdFilm(Films filmsByIdFilm) {
         this.filmsByIdFilm = filmsByIdFilm;
     }
+
+    @Override
+    public String toString() {
+        return
+                "id=" + id +
+                ", dubbingByIdDubbing=" + dubbingByIdDubbing +
+                ", filmsByIdFilm=" + filmsByIdFilm +
+                '\n';
+    }
 }

@@ -28,7 +28,7 @@ public class VoiceActingService extends SessionUtil implements VoiceActingDAO {
         //open session with a transaction
         openTransactionSession();
 
-        String sql = "SELECT * FROM VoiceActing";
+        String sql = "SELECT * FROM Voice_Acting";
 
         Session session = getSession();
         Query query = session.createNativeQuery(sql).addEntity(VoiceActing.class);
@@ -44,7 +44,7 @@ public class VoiceActingService extends SessionUtil implements VoiceActingDAO {
         //open session with a transaction
         openTransactionSession();
 
-        String sql = "SELECT * FROM VoiceActing WHERE ID = :id";
+        String sql = "SELECT * FROM Voice_Acting WHERE ID = :id";
 
         Session session = getSession();
         Query query = session.createNativeQuery(sql).addEntity(VoiceActing.class);

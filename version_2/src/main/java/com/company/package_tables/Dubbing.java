@@ -54,4 +54,13 @@ public class Dubbing {
     public int hashCode() {
         return Objects.hash(id, title, dubbingActorsList);
     }
+
+    @Override
+    public String toString() {
+        return
+                "id=" + id +
+                ", title=" + title  +
+                ", dubbingActorsList=" + dubbingActorsList  +
+                '\n';
+    }
 }

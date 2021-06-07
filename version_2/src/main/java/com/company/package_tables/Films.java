@@ -76,4 +76,15 @@ public class Films {
     public int hashCode() {
         return Objects.hash(id, title, budget, dues, mark);
     }
+
+    @Override
+    public String toString() {
+        return
+                "id=" + id +
+                ", title=" + title +
+                ", budget=" + budget +
+                ", dues=" + dues +
+                ", mark=" + mark  +
+                '\n';
+    }
 }

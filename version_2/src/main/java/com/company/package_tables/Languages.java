@@ -54,4 +54,13 @@ public class Languages {
     public int hashCode() {
         return Objects.hash(id, title, shortTitle);
     }
+
+    @Override
+    public String toString() {
+        return
+                "id=" + id +
+                ", title=" + title  +
+                ", shortTitle=" + shortTitle  +
+                '\n';
+    }
 }

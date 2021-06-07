@@ -54,4 +54,12 @@ public class Actors {
     public int hashCode() {
         return Objects.hash(id, fio, age);
     }
+
+    @Override
+    public String toString() {
+        return  "id=" + id +
+                ", fio=" + fio +
+                ", age=" + age +
+                '\n';
+    }
 }

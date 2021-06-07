@@ -21,7 +21,7 @@ public class ActorsService extends SessionUtil implements ActorsDAO {
         session.save(actors);
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
     }
 
     public List<Actors> getAll() throws SQLException {
@@ -35,7 +35,7 @@ public class ActorsService extends SessionUtil implements ActorsDAO {
         List<Actors> actorsList = query.list();
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
 
         return actorsList;
     }
@@ -53,7 +53,7 @@ public class ActorsService extends SessionUtil implements ActorsDAO {
         Actors actors = (Actors) query.getSingleResult();
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
 
         return actors;
     }
@@ -66,7 +66,7 @@ public class ActorsService extends SessionUtil implements ActorsDAO {
         session.update(actors);
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
     }
 
     public void remove(Actors actors) throws SQLException {
@@ -77,7 +77,7 @@ public class ActorsService extends SessionUtil implements ActorsDAO {
         session.remove(actors);
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
     }
 
 }

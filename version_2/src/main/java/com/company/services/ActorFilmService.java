@@ -1,19 +1,15 @@
 package com.company.services;
 
 
-import com.company.utils.HibernateUtil;
 import com.company.utils.SessionUtil;
 
 import com.company.dao.ActorFilmDAO;
 import com.company.package_tables.ActorFilm;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 
 import org.hibernate.query.Query;
 
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ActorFilmService  extends SessionUtil implements ActorFilmDAO {
@@ -27,7 +23,7 @@ public class ActorFilmService  extends SessionUtil implements ActorFilmDAO {
         session.save(actorFilm);
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
     }
 
     public List<ActorFilm> getAll() throws SQLException {
@@ -41,7 +37,7 @@ public class ActorFilmService  extends SessionUtil implements ActorFilmDAO {
         List<ActorFilm> actorFilmList = query.list();
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
 
         return actorFilmList;
     }
@@ -59,7 +55,7 @@ public class ActorFilmService  extends SessionUtil implements ActorFilmDAO {
         ActorFilm actorFilm = (ActorFilm) query.getSingleResult();
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
 
         return actorFilm;
     }
@@ -72,7 +68,7 @@ public class ActorFilmService  extends SessionUtil implements ActorFilmDAO {
         session.update(actorFilm);
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
     }
 
     public void remove(ActorFilm actorFilm) throws SQLException {
@@ -83,6 +79,6 @@ public class ActorFilmService  extends SessionUtil implements ActorFilmDAO {
         session.remove(actorFilm);
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
     }
 }

@@ -1,10 +1,8 @@
 package com.company.package_tables;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 public class Actors {
@@ -54,12 +52,29 @@ public class Actors {
     public int hashCode() {
         return Objects.hash(id, fio, age);
     }
+    ///
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "actor_film",
+            joinColumns = @JoinColumn(name = "id_actor"),
+            inverseJoinColumns = @JoinColumn(name = "id_film")
+    )
+    private Set<Films> films;
+
+    public Set<Films> getFilms() {
+        return films;
+    }
+
+    public void setFilms(Set<Films> films) {
+        this.films = films;
+    }
+    ///
 
     @Override
     public String toString() {
         return  "id=" + id +
                 ", fio=" + fio +
-                ", age=" + age +
+                ", age=" + age +"films= " + films +
                 '\n';
     }
 }

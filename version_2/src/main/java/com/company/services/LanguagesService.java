@@ -21,7 +21,7 @@ public class LanguagesService extends SessionUtil implements LanguagesDAO {
         session.save(languages);
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
     }
 
     public List<Languages> getAll() throws SQLException {
@@ -35,7 +35,7 @@ public class LanguagesService extends SessionUtil implements LanguagesDAO {
         List<Languages> languagesList = query.list();
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
 
         return languagesList;
     }
@@ -53,7 +53,7 @@ public class LanguagesService extends SessionUtil implements LanguagesDAO {
         Languages languages = (Languages) query.getSingleResult();
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
 
         return languages;
     }
@@ -66,7 +66,7 @@ public class LanguagesService extends SessionUtil implements LanguagesDAO {
         session.update(languages);
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
     }
 
     public void remove(Languages languages) throws SQLException {
@@ -77,6 +77,6 @@ public class LanguagesService extends SessionUtil implements LanguagesDAO {
         session.remove(languages);
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
     }
 }

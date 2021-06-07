@@ -21,7 +21,7 @@ public class VoiceActingService extends SessionUtil implements VoiceActingDAO {
         session.save(voiceActing);
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
     }
 
     public List<VoiceActing> getAll() throws SQLException {
@@ -35,7 +35,7 @@ public class VoiceActingService extends SessionUtil implements VoiceActingDAO {
         List<VoiceActing> voiceActingList = query.list();
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
 
         return voiceActingList;
     }
@@ -53,7 +53,7 @@ public class VoiceActingService extends SessionUtil implements VoiceActingDAO {
         VoiceActing voiceActing = (VoiceActing) query.getSingleResult();
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
 
         return voiceActing;
     }
@@ -66,7 +66,7 @@ public class VoiceActingService extends SessionUtil implements VoiceActingDAO {
         session.update(voiceActing);
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
     }
 
     public void remove(VoiceActing voiceActing) throws SQLException {
@@ -77,6 +77,6 @@ public class VoiceActingService extends SessionUtil implements VoiceActingDAO {
         session.remove(voiceActing);
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
     }
 }

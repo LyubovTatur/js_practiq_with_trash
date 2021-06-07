@@ -21,7 +21,7 @@ public class FilmsService extends SessionUtil implements FilmsDAO {
         session.save(films);
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
     }
 
     public List<Films> getAll() throws SQLException {
@@ -35,7 +35,7 @@ public class FilmsService extends SessionUtil implements FilmsDAO {
         List<Films> filmsList = query.list();
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
 
         return filmsList;
     }
@@ -53,7 +53,7 @@ public class FilmsService extends SessionUtil implements FilmsDAO {
         Films films = (Films) query.getSingleResult();
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
 
         return films;
     }
@@ -66,7 +66,7 @@ public class FilmsService extends SessionUtil implements FilmsDAO {
         session.update(films);
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
     }
 
     public void remove(Films films) throws SQLException {
@@ -77,6 +77,6 @@ public class FilmsService extends SessionUtil implements FilmsDAO {
         session.remove(films);
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
     }
 }

@@ -33,7 +33,7 @@ public class SessionUtil {
         session.close();
     }
 
-    public void closeTransactionSesstion() {
+    public void closeTransactionSession() {
         transaction.commit();
         closeSession();
     }

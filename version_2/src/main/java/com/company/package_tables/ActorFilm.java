@@ -31,25 +31,28 @@ public class ActorFilm {
         this.nameOfPerson = nameOfPerson;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "id_film", referencedColumnName = "id")
-    public Films getFilmsByIdFilm() {
-        return filmsByIdFilm;
-    }
 
-    public void setFilmsByIdFilm(Films filmsByIdFilm) {
-        this.filmsByIdFilm = filmsByIdFilm;
-    }
 
-    @ManyToOne
-    @JoinColumn(name = "id_actor", referencedColumnName = "id")
-    public Actors getActorsByIdActor() {
-        return actorsByIdActor;
-    }
 
-    public void setActorsByIdActor(Actors actorsByIdActor) {
-        this.actorsByIdActor = actorsByIdActor;
-    }
+//    @ManyToOne
+//    @JoinColumn(name = "id_film", referencedColumnName = "id")
+//    public Films getFilmsByIdFilm() {
+//        return filmsByIdFilm;
+//    }
+//
+//    public void setFilmsByIdFilm(Films filmsByIdFilm) {
+//        this.filmsByIdFilm = filmsByIdFilm;
+//    }
+//
+//    @ManyToOne
+//    @JoinColumn(name = "id_actor", referencedColumnName = "id")
+//    public Actors getActorsByIdActor() {
+//        return actorsByIdActor;
+//    }
+//
+//    public void setActorsByIdActor(Actors actorsByIdActor) {
+//        this.actorsByIdActor = actorsByIdActor;
+//    }
 
     @Override
     public boolean equals(Object o) {

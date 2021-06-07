@@ -21,7 +21,7 @@ public class CommentsService extends SessionUtil implements CommentsDAO {
         session.save(comments);
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
     }
 
     public List<Comments> getAll() throws SQLException {
@@ -35,7 +35,7 @@ public class CommentsService extends SessionUtil implements CommentsDAO {
         List<Comments> commentsList = query.list();
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
 
         return commentsList;
     }
@@ -53,7 +53,7 @@ public class CommentsService extends SessionUtil implements CommentsDAO {
         Comments comments = (Comments) query.getSingleResult();
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
 
         return comments;
     }
@@ -66,7 +66,7 @@ public class CommentsService extends SessionUtil implements CommentsDAO {
         session.update(comments);
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
     }
 
     public void remove(Comments comments) throws SQLException {
@@ -77,6 +77,6 @@ public class CommentsService extends SessionUtil implements CommentsDAO {
         session.remove(comments);
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
     }
 }

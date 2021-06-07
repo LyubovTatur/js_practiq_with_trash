@@ -21,7 +21,7 @@ public class DubbingService extends SessionUtil implements DubbingDAO {
         session.save(dubbing);
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
     }
 
     public List<Dubbing> getAll() throws SQLException {
@@ -35,7 +35,7 @@ public class DubbingService extends SessionUtil implements DubbingDAO {
         List<Dubbing> dubbingList = query.list();
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
 
         return dubbingList;
     }
@@ -53,7 +53,7 @@ public class DubbingService extends SessionUtil implements DubbingDAO {
         Dubbing dubbing = (Dubbing) query.getSingleResult();
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
 
         return dubbing;
     }
@@ -66,7 +66,7 @@ public class DubbingService extends SessionUtil implements DubbingDAO {
         session.update(dubbing);
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
     }
 
     public void remove(Dubbing dubbing) throws SQLException {
@@ -77,6 +77,6 @@ public class DubbingService extends SessionUtil implements DubbingDAO {
         session.remove(dubbing);
 
         //close session with a transaction
-        closeTransactionSesstion();
+        closeTransactionSession();
     }
 }

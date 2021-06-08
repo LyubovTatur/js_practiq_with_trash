@@ -1,5 +1,6 @@
 package com.company.package_tables;
 
+
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -57,10 +58,10 @@ public class Languages {
 
     @Override
     public String toString() {
-        return
+        return "Languages{" +
                 "id=" + id +
-                ", title=" + title  +
-                ", shortTitle=" + shortTitle  +
-                '\n';
+                ", title='" + title + '\'' +
+                ", shortTitle='" + shortTitle + '\'' +
+                '}';
     }
 }

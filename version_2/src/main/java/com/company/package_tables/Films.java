@@ -1,8 +1,11 @@
 package com.company.package_tables;
 
-import javax.persistence.*;
+
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Objects;
-import java.util.Set;
 
 @Entity
 public class Films {
@@ -62,24 +65,6 @@ public class Films {
         this.mark = mark;
     }
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinTable(
-            name = "actor_film",
-            joinColumns = @JoinColumn(name = "id_film"),
-            inverseJoinColumns = @JoinColumn(name = "id_actor")
-    )
-    private Set<Actors> actors;
-    ///
-    public Set<Actors> getActors() {
-        return actors;
-    }
-
-    public void setProjects(Set<Actors> actors) {
-        this.actors = actors;
-    }
-
-
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -95,12 +80,12 @@ public class Films {
 
     @Override
     public String toString() {
-        return
+        return "Films{" +
                 "id=" + id +
-                ", title=" + title +
+                ", title='" + title + '\'' +
                 ", budget=" + budget +
                 ", dues=" + dues +
-                ", mark=" + mark  +
-                '\n';
+                ", mark='" + mark + '\'' +
+                '}';
     }
 }

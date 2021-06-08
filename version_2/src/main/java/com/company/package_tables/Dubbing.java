@@ -1,9 +1,7 @@
 package com.company.package_tables;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
@@ -11,6 +9,7 @@ public class Dubbing {
     private int id;
     private String title;
     private String dubbingActorsList;
+    private Languages languagesByIdLanguage;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -55,12 +54,23 @@ public class Dubbing {
         return Objects.hash(id, title, dubbingActorsList);
     }
 
+    @ManyToOne
+    @JoinColumn(name = "id_language", referencedColumnName = "id")
+    public Languages getLanguagesByIdLanguage() {
+        return languagesByIdLanguage;
+    }
+
+    public void setLanguagesByIdLanguage(Languages languagesByIdLanguage) {
+        this.languagesByIdLanguage = languagesByIdLanguage;
+    }
+
     @Override
     public String toString() {
-        return
+        return "Dubbing{" +
                 "id=" + id +
-                ", title=" + title  +
-                ", dubbingActorsList=" + dubbingActorsList  +
-                '\n';
+                ", title='" + title + '\'' +
+                ", dubbingActorsList='" + dubbingActorsList + '\'' +
+                ", languagesByIdLanguage=" + languagesByIdLanguage +
+                '}';
     }
 }

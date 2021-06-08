@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/DB_FILMS?serverTimezone=UTC</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <mapping class="testPackage.ActorFilm"/>
+        <mapping resource="ActorFilm.hbm.xml"/>
+        <mapping class="testPackage.Actors"/>
+        <mapping resource="Actors.hbm.xml"/>
+        <mapping class="testPackage.Comments"/>
+        <mapping resource="Comments.hbm.xml"/>
+        <mapping class="testPackage.Dubbing"/>
+        <mapping resource="Dubbing.hbm.xml"/>
+        <mapping class="testPackage.Films"/>
+        <mapping resource="Films.hbm.xml"/>
+        <mapping class="testPackage.Languages"/>
+        <mapping resource="Languages.hbm.xml"/>
+        <mapping class="testPackage.VoiceActing"/>
+        <mapping resource="VoiceActing.hbm.xml"/>
+        <!-- <property name="connection.username"/> -->
+        <!-- <property name="connection.password"/> -->
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>

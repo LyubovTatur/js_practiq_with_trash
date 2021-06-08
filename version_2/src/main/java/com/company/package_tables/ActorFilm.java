@@ -31,29 +31,6 @@ public class ActorFilm {
         this.nameOfPerson = nameOfPerson;
     }
 
-
-
-
-//    @ManyToOne
-//    @JoinColumn(name = "id_film", referencedColumnName = "id")
-//    public Films getFilmsByIdFilm() {
-//        return filmsByIdFilm;
-//    }
-//
-//    public void setFilmsByIdFilm(Films filmsByIdFilm) {
-//        this.filmsByIdFilm = filmsByIdFilm;
-//    }
-//
-//    @ManyToOne
-//    @JoinColumn(name = "id_actor", referencedColumnName = "id")
-//    public Actors getActorsByIdActor() {
-//        return actorsByIdActor;
-//    }
-//
-//    public void setActorsByIdActor(Actors actorsByIdActor) {
-//        this.actorsByIdActor = actorsByIdActor;
-//    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -67,13 +44,33 @@ public class ActorFilm {
         return Objects.hash(id, nameOfPerson);
     }
 
+    @ManyToOne
+    @JoinColumn(name = "id_film", referencedColumnName = "id")
+    public Films getFilmsByIdFilm() {
+        return filmsByIdFilm;
+    }
+
+    public void setFilmsByIdFilm(Films filmsByIdFilm) {
+        this.filmsByIdFilm = filmsByIdFilm;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "id_actor", referencedColumnName = "id")
+    public Actors getActorsByIdActor() {
+        return actorsByIdActor;
+    }
+
+    public void setActorsByIdActor(Actors actorsByIdActor) {
+        this.actorsByIdActor = actorsByIdActor;
+    }
+
     @Override
     public String toString() {
-        return
+        return "ActorFilm{" +
                 "id=" + id +
-                ", nameOfPerson=" + nameOfPerson +
+                ", nameOfPerson='" + nameOfPerson + '\'' +
                 ", filmsByIdFilm=" + filmsByIdFilm +
                 ", actorsByIdActor=" + actorsByIdActor +
-                '\n';
+                '}';
     }
 }

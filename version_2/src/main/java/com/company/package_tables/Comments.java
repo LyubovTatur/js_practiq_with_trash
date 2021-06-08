@@ -1,9 +1,7 @@
 package com.company.package_tables;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
@@ -12,6 +10,7 @@ public class Comments {
     private String commentator;
     private String commentText;
     private Integer mark;
+    private Films filmsByIdFilm;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -66,13 +65,24 @@ public class Comments {
         return Objects.hash(id, commentator, commentText, mark);
     }
 
+    @ManyToOne
+    @JoinColumn(name = "id_film", referencedColumnName = "id")
+    public Films getFilmsByIdFilm() {
+        return filmsByIdFilm;
+    }
+
+    public void setFilmsByIdFilm(Films filmsByIdFilm) {
+        this.filmsByIdFilm = filmsByIdFilm;
+    }
+
     @Override
     public String toString() {
-        return
+        return "Comments{" +
                 "id=" + id +
-                ", commentator=" + commentator+
-                ", commentText=" + commentText  +
+                ", commentator='" + commentator + '\'' +
+                ", commentText='" + commentText + '\'' +
                 ", mark=" + mark +
-                '\n';
+                ", filmsByIdFilm=" + filmsByIdFilm +
+                '}';
     }
 }

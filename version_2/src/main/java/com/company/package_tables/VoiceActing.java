@@ -1,5 +1,6 @@
 package com.company.package_tables;
 
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -55,10 +56,10 @@ public class VoiceActing {
 
     @Override
     public String toString() {
-        return
+        return "VoiceActing{" +
                 "id=" + id +
                 ", dubbingByIdDubbing=" + dubbingByIdDubbing +
                 ", filmsByIdFilm=" + filmsByIdFilm +
-                '\n';
+                '}';
     }
 }

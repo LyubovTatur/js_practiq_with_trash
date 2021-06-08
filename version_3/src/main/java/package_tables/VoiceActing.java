@@ -1,5 +1,4 @@
-package com.company.package_tables;
-
+package package_tables;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -8,6 +7,8 @@ import java.util.Objects;
 @Table(name = "voice_acting", schema = "db_films", catalog = "")
 public class VoiceActing {
     private int id;
+    private Dubbing dubbingByIdDubbing;
+    private Films filmsByIdFilm;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -32,10 +33,8 @@ public class VoiceActing {
         return Objects.hash(id);
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "id_dubbing", referencedColumnName = "id")
-    private Dubbing dubbingByIdDubbing;
-
     public Dubbing getDubbingByIdDubbing() {
         return dubbingByIdDubbing;
     }
@@ -44,24 +43,13 @@ public class VoiceActing {
         this.dubbingByIdDubbing = dubbingByIdDubbing;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "id_film", referencedColumnName = "id")
-    private Films filmsByIdFilm;
-
     public Films getFilmsByIdFilm() {
         return filmsByIdFilm;
     }
 
     public void setFilmsByIdFilm(Films filmsByIdFilm) {
         this.filmsByIdFilm = filmsByIdFilm;
-    }
-
-    @Override
-    public String toString() {
-        return "VoiceActing{" +
-                "id=" + id +
-                ", dubbingByIdDubbing=" + dubbingByIdDubbing +
-                ", filmsByIdFilm=" + filmsByIdFilm +
-                '}'+'\n';
     }
 }

@@ -1,5 +1,4 @@
-package com.company.package_tables;
-
+package package_tables;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -54,14 +53,5 @@ public class Languages {
     @Override
     public int hashCode() {
         return Objects.hash(id, title, shortTitle);
-    }
-
-    @Override
-    public String toString() {
-        return "Languages{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", shortTitle='" + shortTitle + '\'' +
-                '}'+'\n';
     }
 }

@@ -1,4 +1,4 @@
-package com.company.package_tables;
+package package_tables;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -62,15 +62,5 @@ public class ActorFilm {
 
     public void setActorsByIdActor(Actors actorsByIdActor) {
         this.actorsByIdActor = actorsByIdActor;
-    }
-
-    @Override
-    public String toString() {
-        return "ActorFilm{" +
-                "id=" + id +
-                ", nameOfPerson='" + nameOfPerson + '\'' +
-                ", filmsByIdFilm=" + filmsByIdFilm +
-                ", actorsByIdActor=" + actorsByIdActor +
-                '}'+'\n';
     }
 }

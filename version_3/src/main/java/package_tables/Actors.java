@@ -1,4 +1,4 @@
-package com.company.package_tables;
+package package_tables;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -53,14 +53,5 @@ public class Actors {
     @Override
     public int hashCode() {
         return Objects.hash(id, fio, age);
-    }
-
-    @Override
-    public String toString() {
-        return "Actors{" +
-                "id=" + id +
-                ", fio='" + fio + '\'' +
-                ", age=" + age +
-                '}'+'\n';
     }
 }

@@ -1,5 +1,4 @@
-package com.company.package_tables;
-
+package package_tables;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -73,16 +72,5 @@ public class Comments {
 
     public void setFilmsByIdFilm(Films filmsByIdFilm) {
         this.filmsByIdFilm = filmsByIdFilm;
-    }
-
-    @Override
-    public String toString() {
-        return "Comments{" +
-                "id=" + id +
-                ", commentator='" + commentator + '\'' +
-                ", commentText='" + commentText + '\'' +
-                ", mark=" + mark +
-                ", filmsByIdFilm=" + filmsByIdFilm +
-                '}'+'\n';
     }
 }

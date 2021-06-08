@@ -1,5 +1,4 @@
-package com.company.package_tables;
-
+package package_tables;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -9,6 +8,7 @@ public class Dubbing {
     private int id;
     private String title;
     private String dubbingActorsList;
+    private Languages languagesByIdLanguage;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -53,24 +53,13 @@ public class Dubbing {
         return Objects.hash(id, title, dubbingActorsList);
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "id_language", referencedColumnName = "id")
-    private Languages languagesByIdLanguage;
     public Languages getLanguagesByIdLanguage() {
         return languagesByIdLanguage;
     }
 
     public void setLanguagesByIdLanguage(Languages languagesByIdLanguage) {
         this.languagesByIdLanguage = languagesByIdLanguage;
-    }
-
-    @Override
-    public String toString() {
-        return "Dubbing{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", dubbingActorsList='" + dubbingActorsList + '\'' +
-                ", languagesByIdLanguage=" + languagesByIdLanguage +
-                '}'+'\n';
     }
 }

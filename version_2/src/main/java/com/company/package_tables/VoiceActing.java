@@ -8,6 +8,8 @@ import java.util.Objects;
 @Table(name = "voice_acting", schema = "db_films", catalog = "")
 public class VoiceActing {
     private int id;
+    private Films filmsByIdFilm;
+    private Dubbing dubbingByIdDubbing;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -34,7 +36,7 @@ public class VoiceActing {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_dubbing", referencedColumnName = "id")
-    private Dubbing dubbingByIdDubbing;
+
 
     public Dubbing getDubbingByIdDubbing() {
         return dubbingByIdDubbing;
@@ -46,7 +48,7 @@ public class VoiceActing {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_film", referencedColumnName = "id")
-    private Films filmsByIdFilm;
+
 
     public Films getFilmsByIdFilm() {
         return filmsByIdFilm;

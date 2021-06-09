@@ -14,8 +14,6 @@
         <property name="dubbingActorsList">
             <column name="dubbing_actors_list" sql-type="text" not-null="true"/>
         </property>
-        <many-to-one name="languagesByIdLanguage" class="com.company.package_tables.Languages">
-            <column name="id_language" not-null="true"/>
-        </many-to-one>
+
     </class>
 </hibernate-mapping>

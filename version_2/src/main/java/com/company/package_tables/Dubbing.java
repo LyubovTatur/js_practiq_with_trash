@@ -9,6 +9,8 @@ public class Dubbing {
     private int id;
     private String title;
     private String dubbingActorsList;
+    private Languages languagesByIdLanguage;
+
 
     @Id
     @Column(name = "id", nullable = false)
@@ -53,9 +55,8 @@ public class Dubbing {
         return Objects.hash(id, title, dubbingActorsList);
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "id_language", referencedColumnName = "id")
-    private Languages languagesByIdLanguage;
     public Languages getLanguagesByIdLanguage() {
         return languagesByIdLanguage;
     }

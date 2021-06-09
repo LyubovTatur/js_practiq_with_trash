@@ -6,38 +6,28 @@ import com.company.package_tables.Dubbing;
 import com.company.utils.SessionUtil;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
+import org.hibernate.Transaction;
 
 import java.sql.SQLException;
 import java.util.List;
+import com.company.utils.HibernateSessionFactoryUtil;
 
 public class DubbingService extends SessionUtil implements DubbingDAO {
 
 
     public void add(Dubbing dubbing) throws SQLException {
-        //open session with a transaction
-        openTransactionSession();
-
-        Session session = getSession();
+        Session session = HibernateSessionFactoryUtil.getSession();
+        session.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
         session.save(dubbing);
-
-        //close session with a transaction
-        closeTransactionSession();
+        tx1.commit();
+        session.close();
     }
 
     public List<Dubbing> getAll() throws SQLException {
-        //open session with a transaction
-        openTransactionSession();
+        Session session = HibernateSessionFactoryUtil.getSession();
+        return  (List<Dubbing>) session.getSessionFactory().openSession().createQuery("From Dubbing ").list();
 
-        String sql = "SELECT * FROM Dubbing";
-
-        Session session = getSession();
-        Query query = session.createNativeQuery(sql).addEntity(Dubbing.class);
-        List<Dubbing> dubbingList = query.list();
-
-        //close session with a transaction
-        closeTransactionSession();
-
-        return dubbingList;
     }
 
     public Dubbing getById(Long id) throws SQLException {
@@ -59,24 +49,21 @@ public class DubbingService extends SessionUtil implements DubbingDAO {
     }
 
     public void update(Dubbing dubbing) throws SQLException {
-        //open session with a transaction
-        openTransactionSession();
-
-        Session session = getSession();
+        Session session = HibernateSessionFactoryUtil.getSession();
+        session.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
         session.update(dubbing);
-
-        //close session with a transaction
-        closeTransactionSession();
+        tx1.commit();
+        session.close();
     }
 
     public void remove(Dubbing dubbing) throws SQLException {
-        //open session with a transaction
-        openTransactionSession();
 
-        Session session = getSession();
-        session.remove(dubbing);
-
-        //close session with a transaction
-        closeTransactionSession();
+        Session session = HibernateSessionFactoryUtil.getSession();
+        session.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
+        session.delete(dubbing);
+        tx1.commit();
+        session.close();
     }
 }

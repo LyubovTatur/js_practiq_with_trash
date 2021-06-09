@@ -9,35 +9,24 @@ import org.hibernate.query.Query;
 
 import java.sql.SQLException;
 import java.util.List;
+import com.company.utils.HibernateSessionFactoryUtil;import org.hibernate.Transaction;
 
 public class VoiceActingService extends SessionUtil implements VoiceActingDAO {
 
 
     public void add(VoiceActing voiceActing) throws SQLException {
-        //open session with a transaction
-        openTransactionSession();
-
-        Session session = getSession();
+        Session session = HibernateSessionFactoryUtil.getSession();
+        session.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
         session.save(voiceActing);
-
-        //close session with a transaction
-        closeTransactionSession();
+        tx1.commit();
+        session.close();
     }
 
     public List<VoiceActing> getAll() throws SQLException {
-        //open session with a transaction
-        openTransactionSession();
+        Session session = HibernateSessionFactoryUtil.getSession();
+        return  (List<VoiceActing>) session.getSessionFactory().openSession().createQuery("From VoiceActing ").list();
 
-        String sql = "SELECT * FROM Voice_Acting";
-
-        Session session = getSession();
-        Query query = session.createNativeQuery(sql).addEntity(VoiceActing.class);
-        List<VoiceActing> voiceActingList = query.list();
-
-        //close session with a transaction
-        closeTransactionSession();
-
-        return voiceActingList;
     }
 
     public VoiceActing getById(Long id) throws SQLException {
@@ -59,24 +48,20 @@ public class VoiceActingService extends SessionUtil implements VoiceActingDAO {
     }
 
     public void update(VoiceActing voiceActing) throws SQLException {
-        //open session with a transaction
-        openTransactionSession();
-
-        Session session = getSession();
+        Session session = HibernateSessionFactoryUtil.getSession();
+        session.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
         session.update(voiceActing);
-
-        //close session with a transaction
-        closeTransactionSession();
+        tx1.commit();
+        session.close();
     }
 
     public void remove(VoiceActing voiceActing) throws SQLException {
-        //open session with a transaction
-        openTransactionSession();
-
-        Session session = getSession();
-        session.remove(voiceActing);
-
-        //close session with a transaction
-        closeTransactionSession();
+        Session session = HibernateSessionFactoryUtil.getSession();
+        session.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
+        session.delete(voiceActing);
+        tx1.commit();
+        session.close();
     }
 }

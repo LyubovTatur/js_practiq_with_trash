@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="package_tables.Comments" table="comments" schema="db_films">
+    <class name="com.company.package_tables.Comments" table="comments" schema="db_films">
         <id name="id">
             <column name="id" sql-type="int"/>
         </id>
@@ -17,7 +17,7 @@
         <property name="mark">
             <column name="mark" sql-type="int" not-null="true"/>
         </property>
-        <many-to-one name="filmsByIdFilm" class="package_tables.Films">
+        <many-to-one name="filmsByIdFilm" class="com.company.package_tables.Films">
             <column name="id_film" not-null="true"/>
         </many-to-one>
     </class>

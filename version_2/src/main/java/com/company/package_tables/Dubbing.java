@@ -70,7 +70,7 @@ public class Dubbing {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", dubbingActorsList='" + dubbingActorsList + '\'' +
-                ", languagesByIdLanguage=" + languagesByIdLanguage +
+                ", languagesByIdLanguage=" + languagesByIdLanguage.getTitle() +
                 '}'+'\n';
     }
 }

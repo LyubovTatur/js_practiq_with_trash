@@ -9,35 +9,24 @@ import org.hibernate.query.Query;
 
 import java.sql.SQLException;
 import java.util.List;
-
+import com.company.utils.HibernateSessionFactoryUtil;
+import org.hibernate.Transaction;
 public class FilmsService extends SessionUtil implements FilmsDAO {
 
 
     public void add(Films films) throws SQLException {
-        //open session with a transaction
-        openTransactionSession();
-
-        Session session = getSession();
+        Session session = HibernateSessionFactoryUtil.getSession();
+        session.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
         session.save(films);
-
-        //close session with a transaction
-        closeTransactionSession();
+        tx1.commit();
+        session.close();
     }
 
     public List<Films> getAll() throws SQLException {
-        //open session with a transaction
-        openTransactionSession();
+        Session session = HibernateSessionFactoryUtil.getSession();
+        return  (List<Films>) session.getSessionFactory().openSession().createQuery("From Films ").list();
 
-        String sql = "SELECT * FROM Films";
-
-        Session session = getSession();
-        Query query = session.createNativeQuery(sql).addEntity(Films.class);
-        List<Films> filmsList = query.list();
-
-        //close session with a transaction
-        closeTransactionSession();
-
-        return filmsList;
     }
 
     public Films getById(Long id) throws SQLException {
@@ -59,24 +48,20 @@ public class FilmsService extends SessionUtil implements FilmsDAO {
     }
 
     public void update(Films films) throws SQLException {
-        //open session with a transaction
-        openTransactionSession();
-
-        Session session = getSession();
+        Session session = HibernateSessionFactoryUtil.getSession();
+        session.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
         session.update(films);
-
-        //close session with a transaction
-        closeTransactionSession();
+        tx1.commit();
+        session.close();
     }
 
     public void remove(Films films) throws SQLException {
-        //open session with a transaction
-        openTransactionSession();
-
-        Session session = getSession();
-        session.remove(films);
-
-        //close session with a transaction
-        closeTransactionSession();
+        Session session = HibernateSessionFactoryUtil.getSession();
+        session.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
+        session.delete(films);
+        tx1.commit();
+        session.close();
     }
 }

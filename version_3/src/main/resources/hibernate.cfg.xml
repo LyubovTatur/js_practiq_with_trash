@@ -9,19 +9,19 @@
         <property name="connection.username">root</property>
         <property name="connection.password">1111</property>
         <mapping resource="ActorFilm.hbm.xml"/>
-        <mapping class="package_tables.ActorFilm"/>
+        <mapping class="com.company.package_tables.ActorFilm"/>
         <mapping resource="Actors.hbm.xml"/>
-        <mapping class="package_tables.Actors"/>
-        <mapping class="package_tables.Comments"/>
+        <mapping class="com.company.package_tables.Actors"/>
+        <mapping class="com.company.package_tables.Comments"/>
         <mapping resource="Comments.hbm.xml"/>
-        <mapping class="package_tables.Dubbing"/>
+        <mapping class="com.company.package_tables.Dubbing"/>
         <mapping resource="Dubbing.hbm.xml"/>
         <mapping resource="Films.hbm.xml"/>
-        <mapping class="package_tables.Films"/>
+        <mapping class="com.company.package_tables.Films"/>
         <mapping resource="Languages.hbm.xml"/>
-        <mapping class="package_tables.Languages"/>
+        <mapping class="com.company.package_tables.Languages"/>
         <mapping resource="VoiceActing.hbm.xml"/>
-        <mapping class="package_tables.VoiceActing"/>
+        <mapping class="com.company.package_tables.VoiceActing"/>
 
 
         <!-- DB schema will be updated if needed -->

@@ -69,8 +69,8 @@ public class ActorFilm {
         return "ActorFilm{" +
                 "id=" + id +
                 ", nameOfPerson='" + nameOfPerson + '\'' +
-                ", filmsByIdFilm=" + filmsByIdFilm +
-                ", actorsByIdActor=" + actorsByIdActor +
+                ", filmsByIdFilm=" + filmsByIdFilm.getTitle() +
+                ", actorsByIdActor=" + actorsByIdActor.getFio() +
                 '}'+'\n';
     }
 }

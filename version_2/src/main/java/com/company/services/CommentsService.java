@@ -5,39 +5,29 @@ import com.company.dao.CommentsDAO;
 import com.company.package_tables.Comments;
 import com.company.utils.SessionUtil;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import java.sql.SQLException;
 import java.util.List;
+import com.company.utils.HibernateSessionFactoryUtil;
 
 public class CommentsService extends SessionUtil implements CommentsDAO {
 
 
     public void add(Comments comments) throws SQLException {
-        //open session with a transaction
-        openTransactionSession();
-
-        Session session = getSession();
+        Session session = HibernateSessionFactoryUtil.getSession();
+        session.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
         session.save(comments);
-
-        //close session with a transaction
-        closeTransactionSession();
+        tx1.commit();
+        session.close();
     }
 
     public List<Comments> getAll() throws SQLException {
-        //open session with a transaction
-        openTransactionSession();
+        Session session = HibernateSessionFactoryUtil.getSession();
+        return  (List<Comments>) session.getSessionFactory().openSession().createQuery("From Comments ").list();
 
-        String sql = "SELECT * FROM Comments";
-
-        Session session = getSession();
-        Query query = session.createNativeQuery(sql).addEntity(Comments.class);
-        List<Comments> commentsList = query.list();
-
-        //close session with a transaction
-        closeTransactionSession();
-
-        return commentsList;
     }
 
     public Comments getById(Long id) throws SQLException {
@@ -59,24 +49,20 @@ public class CommentsService extends SessionUtil implements CommentsDAO {
     }
 
     public void update(Comments comments) throws SQLException {
-        //open session with a transaction
-        openTransactionSession();
-
-        Session session = getSession();
+        Session session = HibernateSessionFactoryUtil.getSession();
+        session.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
         session.update(comments);
-
-        //close session with a transaction
-        closeTransactionSession();
+        tx1.commit();
+        session.close();
     }
 
     public void remove(Comments comments) throws SQLException {
-        //open session with a transaction
-        openTransactionSession();
-
-        Session session = getSession();
-        session.remove(comments);
-
-        //close session with a transaction
-        closeTransactionSession();
+        Session session = HibernateSessionFactoryUtil.getSession();
+        session.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
+        session.delete(comments);
+        tx1.commit();
+        session.close();
     }
 }

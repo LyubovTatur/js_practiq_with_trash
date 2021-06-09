@@ -9,35 +9,25 @@ import org.hibernate.query.Query;
 
 import java.sql.SQLException;
 import java.util.List;
+import com.company.utils.HibernateSessionFactoryUtil;import org.hibernate.Transaction;
 
 public class LanguagesService extends SessionUtil implements LanguagesDAO {
 
 
     public void add(Languages languages) throws SQLException {
-        //open session with a transaction
-        openTransactionSession();
 
-        Session session = getSession();
+        Session session = HibernateSessionFactoryUtil.getSession();
+        session.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
         session.save(languages);
-
-        //close session with a transaction
-        closeTransactionSession();
+        tx1.commit();
+        session.close();
     }
 
     public List<Languages> getAll() throws SQLException {
-        //open session with a transaction
-        openTransactionSession();
+        Session session = HibernateSessionFactoryUtil.getSession();
+        return  (List<Languages>) session.getSessionFactory().openSession().createQuery("From Languages ").list();
 
-        String sql = "SELECT * FROM Languages";
-
-        Session session = getSession();
-        Query query = session.createNativeQuery(sql).addEntity(Languages.class);
-        List<Languages> languagesList = query.list();
-
-        //close session with a transaction
-        closeTransactionSession();
-
-        return languagesList;
     }
 
     public Languages getById(Long id) throws SQLException {
@@ -59,24 +49,20 @@ public class LanguagesService extends SessionUtil implements LanguagesDAO {
     }
 
     public void update(Languages languages) throws SQLException {
-        //open session with a transaction
-        openTransactionSession();
-
-        Session session = getSession();
+        Session session = HibernateSessionFactoryUtil.getSession();
+        session.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
         session.update(languages);
-
-        //close session with a transaction
-        closeTransactionSession();
+        tx1.commit();
+        session.close();
     }
 
     public void remove(Languages languages) throws SQLException {
-        //open session with a transaction
-        openTransactionSession();
-
-        Session session = getSession();
-        session.remove(languages);
-
-        //close session with a transaction
-        closeTransactionSession();
+        Session session = HibernateSessionFactoryUtil.getSession();
+        session.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
+        session.delete(languages);
+        tx1.commit();
+        session.close();
     }
 }

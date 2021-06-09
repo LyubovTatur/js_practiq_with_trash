@@ -4,14 +4,14 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="package_tables.VoiceActing" table="voice_acting" schema="db_films">
+    <class name="com.company.package_tables.VoiceActing" table="voice_acting" schema="db_films">
         <id name="id">
             <column name="id" sql-type="int"/>
         </id>
-        <many-to-one name="dubbingByIdDubbing" class="package_tables.Dubbing">
+        <many-to-one name="dubbingByIdDubbing" class="com.company.package_tables.Dubbing">
             <column name="id_dubbing" not-null="true"/>
         </many-to-one>
-        <many-to-one name="filmsByIdFilm" class="package_tables.Films">
+        <many-to-one name="filmsByIdFilm" class="com.company.package_tables.Films">
             <column name="id_film" not-null="true"/>
         </many-to-one>
     </class>

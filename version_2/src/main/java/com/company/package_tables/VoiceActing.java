@@ -60,8 +60,8 @@ public class VoiceActing {
     public String toString() {
         return "VoiceActing{" +
                 "id=" + id +
-                ", dubbingByIdDubbing=" + dubbingByIdDubbing +
-                ", filmsByIdFilm=" + filmsByIdFilm +
+                ", dubbingByIdDubbing=" + dubbingByIdDubbing.getTitle() +
+                ", filmsByIdFilm=" + filmsByIdFilm.getTitle() +
                 '}'+'\n';
     }
 }

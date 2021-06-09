@@ -4,17 +4,17 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="package_tables.ActorFilm" table="actor_film" schema="db_films">
+    <class name="com.company.package_tables.ActorFilm" table="actor_film" schema="db_films">
         <id name="id">
             <column name="id" sql-type="int"/>
         </id>
         <property name="nameOfPerson">
             <column name="name_of_person" sql-type="varchar(30)" length="30" not-null="true"/>
         </property>
-        <many-to-one name="filmsByIdFilm" class="package_tables.Films">
+        <many-to-one name="filmsByIdFilm" class="com.company.package_tables.Films">
             <column name="id_film" not-null="true"/>
         </many-to-one>
-        <many-to-one name="actorsByIdActor" class="package_tables.Actors">
+        <many-to-one name="actorsByIdActor" class="com.company.package_tables.Actors">
             <column name="id_actor" not-null="true"/>
         </many-to-one>
     </class>

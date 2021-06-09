@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="package_tables.Dubbing" table="dubbing" schema="db_films">
+    <class name="com.company.package_tables.Dubbing" table="dubbing" schema="db_films">
         <id name="id">
             <column name="id" sql-type="int"/>
         </id>
@@ -14,7 +14,7 @@
         <property name="dubbingActorsList">
             <column name="dubbing_actors_list" sql-type="text" not-null="true"/>
         </property>
-        <many-to-one name="languagesByIdLanguage" class="package_tables.Languages">
+        <many-to-one name="languagesByIdLanguage" class="com.company.package_tables.Languages">
             <column name="id_language" not-null="true"/>
         </many-to-one>
     </class>

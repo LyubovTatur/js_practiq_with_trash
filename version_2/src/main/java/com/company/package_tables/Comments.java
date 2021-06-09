@@ -82,7 +82,7 @@ public class Comments {
                 ", commentator='" + commentator + '\'' +
                 ", commentText='" + commentText + '\'' +
                 ", mark=" + mark +
-                ", filmsByIdFilm=" + filmsByIdFilm +
+                ", filmsByIdFilm=" + filmsByIdFilm.getTitle() +
                 '}'+'\n';
     }
 }

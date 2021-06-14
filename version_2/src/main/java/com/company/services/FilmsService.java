@@ -2,6 +2,7 @@ package com.company.services;
 
 
 import com.company.dao.FilmsDAO;
+import com.company.package_tables.Actors;
 import com.company.package_tables.Films;
 import com.company.utils.SessionUtil;
 import org.hibernate.Session;
@@ -31,18 +32,13 @@ public class FilmsService extends SessionUtil implements FilmsDAO {
 
     public Films getById(Long id) throws SQLException {
         //open session with a transaction
-        openTransactionSession();
-
-        String sql = "SELECT * FROM Films WHERE ID = :id";
-
-        Session session = getSession();
-        Query query = session.createNativeQuery(sql).addEntity(Films.class);
-        query.setParameter("id", id);
-
-        Films films = (Films) query.getSingleResult();
-
-        //close session with a transaction
-        closeTransactionSession();
+        Films films = new Films();
+        List<Films> all = getAll();
+        for (Films f: all) {
+            System.out.println(f.getId() + "/"+id);
+            if (f.getId() == id)
+                films= f;
+        }
 
         return films;
     }

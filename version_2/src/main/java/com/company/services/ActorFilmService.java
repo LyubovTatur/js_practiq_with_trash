@@ -35,19 +35,26 @@ public class ActorFilmService  extends SessionUtil implements ActorFilmDAO {
     public ActorFilm getById(Long id) throws SQLException {
         //open session with a transaction
 
+        ActorFilm actorFilm = new ActorFilm();
+        List<ActorFilm> all = getAll();
+        for (ActorFilm af: all) {
+            if (af.getId() == id)
+                actorFilm = af;
+        }
 
-       openTransactionSession();
-
-       String sql = "SELECT * FROM Actor_Film WHERE ID = :id";
-
-       Session session = getSession();
-       Query query = session.createNativeQuery(sql).addEntity(ActorFilm.class);
-       query.setParameter("id", id);
-
-       ActorFilm actorFilm = (ActorFilm) query.getSingleResult();
-
-       //close session with a transaction
-       closeTransactionSession();
+//
+//       openTransactionSession();
+//
+//       String sql = "SELECT * FROM Actor_Film WHERE ID = :id";
+//
+//       Session session = getSession();
+//       Query query = session.createNativeQuery(sql).addEntity(ActorFilm.class);
+//       query.setParameter("id", id);
+//
+//       ActorFilm actorFilm = (ActorFilm) query.getSingleResult();
+//
+//       //close session with a transaction
+//       closeTransactionSession();
 
        return actorFilm;
     }

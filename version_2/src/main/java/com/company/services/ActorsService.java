@@ -2,6 +2,7 @@ package com.company.services;
 
 
 import com.company.dao.ActorsDAO;
+import com.company.package_tables.ActorFilm;
 import com.company.package_tables.Actors;
 import com.company.utils.SessionUtil;
 import org.hibernate.Session;
@@ -33,18 +34,13 @@ public class ActorsService extends SessionUtil implements ActorsDAO {
 
     public Actors getById(Long id) throws SQLException {
         //open session with a transaction
-        openTransactionSession();
-
-        String sql = "SELECT * FROM Actors WHERE ID = :id";
-
-        Session session = getSession();
-        Query query = session.createNativeQuery(sql).addEntity(Actors.class);
-        query.setParameter("id", id);
-
-        Actors actors = (Actors) query.getSingleResult();
-
-        //close session with a transaction
-        closeTransactionSession();
+        Actors actors = new Actors();
+        List<Actors> all = getAll();
+        for (Actors a: all) {
+            System.out.println(a.getId() + "/"+id);
+            if (a.getId() == id)
+                actors= a;
+        }
 
         return actors;
     }
